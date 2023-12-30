@@ -1,0 +1,8 @@
+.favorites {
+	background: url(../../../public/favBG.jpeg) center / contain no-repeat;
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	gap: 2.5vw;
+	padding: 5%;
+	min-height: 100vh;
+}

@@ -1,0 +1,13 @@
+.splash {
+	background-color: var(--background);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-height: 100vh;
+	position: absolute;
+	inset: 0;
+	z-index: 2;
+	img {
+		width: 15vh;
+	}
+}

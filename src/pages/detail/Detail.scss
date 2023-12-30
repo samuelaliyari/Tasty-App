@@ -1,0 +1,85 @@
+.detail {
+	padding: 5%;
+	color: var(--text);
+	min-height: 100vh;
+	background: url(../../../public/listBackground.jpeg) center / cover
+		no-repeat fixed rgba(0, 0, 0, 0.142);
+	display: grid;
+	place-items: center;
+	gap: 5vh;
+	section {
+		display: flex;
+		align-items: center;
+		gap: 5vw;
+		width: 99%;
+		justify-content: space-evenly;
+		background: transparent;
+		backdrop-filter: brightness(50%) blur(12px);
+		border-radius: 1rem;
+		section {
+			overflow-y: scroll;
+			p {
+				height: 35vh;
+				width: 80%;
+				padding: 2.5%;
+			}
+		}
+		article {
+			background: transparent;
+			width: 80%;
+			aspect-ratio: 1 / 1;
+			padding: 0.5%;
+			backdrop-filter: brightness(50%) blur(12px);
+			border-radius: 50%;
+			position: relative;
+			display: grid;
+			place-items: center;
+
+			img {
+				width: 95%;
+				border-radius: 50%;
+				margin: 0 auto;
+				aspect-ratio: 1 / 1;
+				background-color: black;
+				padding: 5%;
+			}
+			h2 {
+				font-size: 1vw;
+				padding: 1%;
+				position: absolute;
+				top: 30%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 80%;
+				text-align: center;
+				background-color: black;
+			}
+		}
+	}
+	.videoContainer {
+		padding: 5%;
+
+		place-items: center;
+		div {
+			width: 60%;
+			margin-right: auto;
+		}
+		article {
+			margin-right: auto;
+			text-align: left;
+			width: 40%;
+			ol {
+				width: 100%;
+				li {
+					display: flex;
+					justify-content: space-between;
+					padding: 1%;
+					border: 1px solid var(--text);
+					p {
+						width: 50%;
+					}
+				}
+			}
+		}
+	}
+}

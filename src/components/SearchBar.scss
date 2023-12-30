@@ -1,0 +1,49 @@
+.search {
+	width: 100%;
+	min-height: 40vh;
+	background-color: #5a189a;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: url(../../../public/3dchef.png) left / 28% no-repeat,
+		url(../../../public/chefRight.png) right / 25% no-repeat, #59189a00;
+	backdrop-filter: blur(16px) brightness(60%) saturate(50%);
+	border-bottom: 5px solid var(--background);
+	flex-direction: column;
+	form {
+		input {
+			width: 30vw;
+			font-size: 1.8vw;
+			color: var(--text);
+			background-color: rgba(0, 0, 0, 0.576);
+			border: 2px solid var(--text);
+			border-radius: 0.5rem;
+			padding: 1% 2%;
+			margin-top: 5%;
+			&:focus {
+				outline: none;
+			}
+			&::placeholder {
+				color: var(--text);
+				opacity: 0.8;
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.search {
+		min-height: 17vh;
+		form {
+			input {
+				font-size: 1.8vh;
+				border-radius: 0.2rem;
+			}
+		}
+	}
+}
+@media only screen and (max-width: 600px) {
+	.search {
+		min-height: 13vh;
+	}
+}
