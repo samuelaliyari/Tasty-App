@@ -5,6 +5,7 @@
 	align-items: center;
 	padding-top: 10%;
 	min-height: 100vh;
+	z-index: 10;
 	h1 {
 		color: var(--text);
 		font-size: 3vw;
@@ -54,5 +55,41 @@
 
 	100% {
 		transform: rotate(360deg);
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.onBoarding {
+		h1 {
+			font-size: 3vh;
+			transform: translate(0, -5vh);
+		}
+
+		.plate {
+			width: 40vh;
+		}
+		a {
+			display: inline-block;
+			font-size: 1.5vh;
+			color: rgb(255, 219, 205);
+			background-color: #9d4edd;
+			width: 17%;
+			aspect-ratio: 1 / 1;
+			border-radius: 50%;
+			line-height: 100%;
+			display: grid;
+			place-items: center;
+			transform: translate(130%, -90%);
+			border: 0.5vh solid var(--text);
+			&:active {
+				color: white;
+				box-shadow: 0 0 3px 6px #9d4edd;
+			}
+		}
+		p {
+			color: var(--text);
+			transform: translateY(-5vh);
+			font-size: 1.4vh;
+		}
 	}
 }

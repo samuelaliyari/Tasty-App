@@ -5,8 +5,8 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	background: url(../../../public/3dchef.png) left / 28% no-repeat,
-		url(../../../public/chefRight.png) right / 25% no-repeat, #59189a00;
+	background: url(../../../public/leftheader.png) left / 28% no-repeat,
+		url(../../../public/rightheader.png) right / 25% no-repeat;
 	backdrop-filter: blur(16px) brightness(60%) saturate(50%);
 	border-bottom: 5px solid var(--background);
 	flex-direction: column;
