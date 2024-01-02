@@ -1,7 +1,13 @@
 .gallery {
 	display: grid;
-	grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-	gap: 2.5vw;
-	padding: 5%;
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	gap: 3vh;
+	padding: 10% 5%;
 	min-height: 100vh;
+	place-items: center;
+}
+@media only screen and (max-width: 900px) {
+	.gallery {
+		grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+	}
 }

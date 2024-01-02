@@ -3,12 +3,14 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
+	text-align: center;
 	width: 100%;
 	background: url(../../../public/loginBackground.png) center / cover
 		no-repeat;
 	article {
 		background: transparent;
 		backdrop-filter: blur(10px);
+		-webkit-backdrop-filter: blur(10px);
 		width: 40%;
 		border-radius: 1rem;
 		margin: 0 auto;
@@ -64,6 +66,43 @@
 				text-underline-offset: 2px;
 				font-size: 1.4vw;
 				text-shadow: 0 0 2px black;
+			}
+		}
+		a {
+			color: greenyellow;
+			text-decoration: underline;
+			padding-top: 3%;
+			width: 90%;
+			text-align: center;
+			text-underline-offset: 2px;
+			font-size: 1.4vw;
+			text-shadow: 0 0 2px black;
+			margin: 3% auto;
+		}
+	}
+}
+
+@media only screen and (max-width: 600px) {
+	.login {
+		article {
+			width: 70%;
+			h3 {
+				font-size: 3.2vh;
+			}
+			form {
+				input {
+					width: 90%;
+					font-size: 2vh;
+					&::placeholder {
+						font-size: 2vh;
+					}
+				}
+				button {
+					font-size: 2vh;
+				}
+				a {
+					font-size: 1.4vh;
+				}
 			}
 		}
 	}

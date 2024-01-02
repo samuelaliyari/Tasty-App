@@ -1,7 +1,6 @@
 import { useParams } from "react-router-dom";
 import "./Detail.scss";
-import { useEffect, useState } from "react";
-import Navbar from "../../components/nav/Navbar";
+import { useContext, useEffect, useState } from "react";
 import ReactPlayer from "react-player/youtube";
 import { Keyword } from "../../context/Context";
 
@@ -15,7 +14,6 @@ const Detail = () => {
 			.then((data) => setMeal(data.meals[0]));
 	}, [id]);
 
-	console.log(meal);
 	return (
 		<section className='detail'>
 			<section>
@@ -49,34 +47,62 @@ const Detail = () => {
 							<p>{meal.strIngredient2}</p>
 							<p>{meal.strMeasure2}</p>
 						</li>
-						<li>
-							<p>{meal.strIngredient3}</p>
-							<p>{meal.strMeasure3}</p>
-						</li>
-						<li>
-							<p>{meal.strIngredient4}</p>
-							<p>{meal.strMeasure4}</p>
-						</li>
-						<li>
-							<p>{meal.strIngredient5}</p>
-							<p>{meal.strMeasure5}</p>
-						</li>
-						<li>
-							<p>{meal.strIngredient6}</p>
-							<p>{meal.strMeasure6}</p>
-						</li>
-						<li>
-							<p>{meal.strIngredient7}</p>
-							<p>{meal.strMeasure7}</p>
-						</li>
-						<li>
-							<p>{meal.strIngredient8}</p>
-							<p>{meal.strMeasure8}</p>
-						</li>
-						<li>
-							<p>{meal.strIngredient9}</p>
-							<p>{meal.strMeasure9}</p>
-						</li>
+						{meal.strIngredient3 !== "" ? (
+							<li>
+								<p>{meal.strIngredient3}</p>
+								<p>{meal.strMeasure3}</p>
+							</li>
+						) : (
+							<p></p>
+						)}
+						{meal.strIngredient4 !== "" ? (
+							<li>
+								<p>{meal.strIngredient4}</p>
+								<p>{meal.strMeasure4}</p>
+							</li>
+						) : (
+							<p></p>
+						)}
+						{meal.strIngredient5 !== "" ? (
+							<li>
+								<p>{meal.strIngredient5}</p>
+								<p>{meal.strMeasure5}</p>
+							</li>
+						) : (
+							<p></p>
+						)}
+						{meal.strIngredient6 !== "" ? (
+							<li>
+								<p>{meal.strIngredient6}</p>
+								<p>{meal.strMeasure6}</p>
+							</li>
+						) : (
+							<p></p>
+						)}
+						{meal.strIngredient7 !== "" ? (
+							<li>
+								<p>{meal.strIngredient7}</p>
+								<p>{meal.strMeasure7}</p>
+							</li>
+						) : (
+							<p></p>
+						)}
+						{meal.strIngredient8 !== "" ? (
+							<li>
+								<p>{meal.strIngredient8}</p>
+								<p>{meal.strMeasure8}</p>
+							</li>
+						) : (
+							<p></p>
+						)}
+						{meal.strIngredient9 !== "" ? (
+							<li>
+								<p>{meal.strIngredient9}</p>
+								<p>{meal.strMeasure9}</p>
+							</li>
+						) : (
+							<p></p>
+						)}
 						{meal.strIngredient10 !== "" ? (
 							<li>
 								<p>{meal.strIngredient10}</p>

@@ -10,7 +10,7 @@ const Area = () => {
 	return (
 		<section className='area'>
 			<SearchBar />
-			<Navbar />
+
 			<AreaGallery area={keyword.area} />
 		</section>
 	);

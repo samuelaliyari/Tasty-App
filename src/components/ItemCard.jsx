@@ -19,18 +19,14 @@ const ItemCard = ({ meal }) => {
 				setFavorites([...favorites, meal]);
 			}
 		} else {
-			console.log(activeUser);
 			window.alert("please Login or register to use this feature");
 		}
 	};
-	useEffect(() => {
-		console.log(favorites);
-	}, [favorites]);
+	useEffect(() => {}, [favorites]);
 
 	useEffect(() => {
 		if (localStorage.getItem("active") !== null) {
 			setActiveUser(JSON.parse(localStorage.getItem("active")));
-			console.log("user found");
 		}
 	}, []);
 	return (
@@ -52,7 +48,9 @@ const ItemCard = ({ meal }) => {
 					</div>
 				</article>
 			</Link>
-			<section onClick={() => addTofav()}>
+			<section
+				onClick={() => addTofav()}
+				className='favIcon'>
 				<img
 					style={
 						favorites.find((elt) => elt.idMeal === meal.idMeal)

@@ -9,10 +9,7 @@ import { Keyword } from "../../context/Context";
 
 const Navbar = () => {
 	const { activeUser, favorites } = useContext(Keyword);
-	useEffect(() => {
-		console.log(favorites);
-		console.log(activeUser);
-	}, [favorites, activeUser]);
+	useEffect(() => {}, [favorites, activeUser]);
 	return (
 		<header>
 			<nav>

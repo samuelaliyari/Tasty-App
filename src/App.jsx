@@ -27,7 +27,6 @@ function App() {
 		}
 		if (localStorage.getItem("active") !== null) {
 			setActiveUser(JSON.parse(localStorage.getItem("active")));
-			console.log("user found");
 		}
 	}, []);
 
@@ -43,9 +42,7 @@ function App() {
 		}
 	}, [favorites]);
 
-	useEffect(() => {
-		console.log(favorites);
-	}, [favorites]);
+	useEffect(() => {}, [favorites]);
 
 	return (
 		<>

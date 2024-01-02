@@ -5,13 +5,15 @@ import "./Favorites.scss";
 import { Keyword } from "../../context/Context";
 const Favorites = () => {
 	const { favorites, setFavorites } = useContext(Keyword);
-	console.log(favorites);
+
 	return (
 		<section>
-			<Navbar favorites={favorites} />
 			<article className='favorites'>
 				{favorites.map((meal) => (
-					<ItemCard meal={meal} />
+					<ItemCard
+						key={meal.idMeal}
+						meal={meal}
+					/>
 				))}
 			</article>
 		</section>

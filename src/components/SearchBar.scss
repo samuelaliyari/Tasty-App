@@ -8,8 +8,10 @@
 	background: url(../../public/leftheader.png) left / 28% no-repeat,
 		url(../../public/rightheader.png) right / 25% no-repeat;
 	backdrop-filter: blur(16px) brightness(60%) saturate(50%);
+	-webkit-backdrop-filter: blur(16px) brightness(60%) saturate(50%);
 	border-bottom: 5px solid var(--background);
 	flex-direction: column;
+
 	form {
 		input {
 			width: 30vw;
@@ -19,7 +21,7 @@
 			border: 2px solid var(--text);
 			border-radius: 0.5rem;
 			padding: 1% 2%;
-			margin-top: 5%;
+			margin-top: 10%;
 			&:focus {
 				outline: none;
 			}
@@ -33,6 +35,8 @@
 
 @media only screen and (max-width: 900px) {
 	.search {
+		background: url(../../public/leftheader.png) left / 28% no-repeat,
+			url(../../public/rightheader.png) right / 25% no-repeat;
 		min-height: 17vh;
 		form {
 			input {
@@ -45,5 +49,16 @@
 @media only screen and (max-width: 600px) {
 	.search {
 		min-height: 13vh;
+		background: url(../../public/leftheader.png) -6% / 35% no-repeat,
+			url(../../public/rightheader.png) 105% / 30% no-repeat;
+		div {
+			padding: 2%;
+		}
+		form {
+			input {
+				margin-block: 3%;
+				width: 25vh;
+			}
+		}
 	}
 }

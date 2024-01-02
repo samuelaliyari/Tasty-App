@@ -5,12 +5,11 @@ import Navbar from "../../components/nav/Navbar";
 
 const Category = () => {
 	const keyword = useParams();
-	console.log(keyword.category);
 
 	return (
 		<section className='category'>
 			<SearchBar />
-			<Navbar />
+
 			<CategoryGallery category={keyword.category} />
 		</section>
 	);

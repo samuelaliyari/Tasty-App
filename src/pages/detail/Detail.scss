@@ -15,6 +15,8 @@
 		justify-content: space-evenly;
 		background: transparent;
 		backdrop-filter: brightness(50%) blur(12px);
+		-webkit-backdrop-filter: brightness(50%) blur(12px);
+
 		border-radius: 1rem;
 		section {
 			overflow-y: scroll;
@@ -30,6 +32,7 @@
 			aspect-ratio: 1 / 1;
 			padding: 0.5%;
 			backdrop-filter: brightness(50%) blur(12px);
+			-webkit-backdrop-filter: brightness(50%) blur(12px);
 			border-radius: 50%;
 			position: relative;
 			display: grid;
@@ -77,6 +80,75 @@
 					border: 1px solid var(--text);
 					p {
 						width: 50%;
+					}
+				}
+			}
+		}
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	.detail {
+		section {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 5vw;
+			width: 99%;
+			justify-content: space-evenly;
+			padding: 3%;
+			section {
+				overflow-y: scroll;
+				p {
+					margin-bottom: 3%;
+					font-size: 2vh;
+				}
+			}
+			article {
+				img {
+					width: 95%;
+					border-radius: 50%;
+					margin: 0 auto;
+					aspect-ratio: 1 / 1;
+					background-color: black;
+					padding: 5%;
+				}
+				h2 {
+					font-size: 2vh;
+					padding: 1%;
+					position: absolute;
+					top: 30%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					width: 80%;
+					text-align: center;
+					background-color: black;
+				}
+			}
+		}
+		.videoContainer {
+			padding: 5%;
+			place-items: center;
+			div {
+				width: 90%;
+				margin: 0 auto;
+			}
+			article {
+				margin: 0 auto;
+				text-align: left;
+				width: 90%;
+
+				ol {
+					width: 100%;
+					li {
+						display: flex;
+						justify-content: space-between;
+						padding: 1%;
+						border: 0.8px solid var(--text);
+						p {
+							width: 80%;
+							font-size: 1.5vh;
+						}
 					}
 				}
 			}

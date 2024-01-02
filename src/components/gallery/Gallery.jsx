@@ -25,9 +25,7 @@ const Gallery = ({ category, area }) => {
 		}
 	}, [category]);
 
-	useEffect(() => {
-		console.log(renderData);
-	}, [area, category, keyword]);
+	useEffect(() => {}, [area, category, keyword]);
 
 	return (
 		<section className='gallery'>

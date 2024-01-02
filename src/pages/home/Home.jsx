@@ -34,6 +34,33 @@ const Home = () => {
 				input={searchInput}
 				setInput={setSearchInput}
 			/>
+			<article className='categoriesConteiner'>
+				<h2>Categories</h2>
+				<div className='categories'>
+					{categories?.map((category, index) => (
+						<Link
+							value={category.strCategory}
+							key={index}
+							to={`/category/${category.strCategory}`}>
+							{category.strCategory}
+						</Link>
+					))}
+				</div>
+			</article>
+
+			<article className='areaContainer'>
+				<h2>Areas</h2>
+				<div className='areas'>
+					{allAreas?.map((area, index) => (
+						<Link
+							key={index}
+							area={area.strArea}
+							to={`/area/${area.strArea}`}>
+							{area.strArea}
+						</Link>
+					))}
+				</div>
+			</article>
 
 			<article className='day'>
 				<h2>Meal of the Day</h2>
@@ -57,32 +84,6 @@ const Home = () => {
 						</div>
 					</Link>
 				</article>
-			</article>
-			<article className='areaContainer'>
-				<h2>Areas</h2>
-				<div className='areas'>
-					{allAreas?.map((area, index) => (
-						<Link
-							key={index}
-							area={area.strArea}
-							to={`/area/${area.strArea}`}>
-							{area.strArea}
-						</Link>
-					))}
-				</div>
-			</article>
-			<article className='categoriesConteiner'>
-				<h2>Categories</h2>
-				<div className='categories'>
-					{categories?.map((category, index) => (
-						<Link
-							value={category.strCategory}
-							key={index}
-							to={`/category/${category.strCategory}`}>
-							{category.strCategory}
-						</Link>
-					))}
-				</div>
 			</article>
 		</main>
 	);

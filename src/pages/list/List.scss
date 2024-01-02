@@ -1,6 +1,12 @@
 .list,
 .area,
 .category {
-	background: url(../../../public/listBackground.webp) center / cover
-		no-repeat fixed;
+	background: url(../../../public/listBackground.webp) top / cover fixed;
+}
+@media only screen and (max-width: 600px) {
+	.list,
+	.area,
+	.category {
+		background: url(../../../public/mobile.jpeg) top / contain fixed;
+	}
 }

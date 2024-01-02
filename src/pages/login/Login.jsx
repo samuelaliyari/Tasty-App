@@ -9,6 +9,8 @@ const Login = () => {
 	const [userPass, setUserPass] = useState("");
 	const [user, setUser] = useState("");
 	const navigate = useNavigate();
+	const [emailMatch, setEmailMatch] = useState(true);
+	const [passMatch, setPassMatch] = useState(true);
 
 	const login = () => {
 		event.preventDefault();
@@ -16,10 +18,19 @@ const Login = () => {
 		const currentUser = users.filter((user) =>
 			user.mail === userMail ? user : null,
 		);
-		console.log(currentUser);
-
+		if (!currentUser[0]) {
+			setEmailMatch(false);
+		}
+		if (currentUser[0]) {
+			setEmailMatch(true);
+		}
+		if (!currentUser[0]) {
+			setEmailMatch(false);
+		}
+		if (currentUser[0].pass !== userPass) {
+			setPassMatch(false);
+		}
 		if (currentUser[0].pass === userPass) {
-			console.log("sucess");
 			setUser(userMail);
 
 			console.log(userMail + " is active");
@@ -27,9 +38,7 @@ const Login = () => {
 		}
 	};
 
-	useEffect(() => {
-		console.log(users);
-	}, [users]);
+	useEffect(() => {}, [users]);
 
 	useEffect(() => {
 		setActiveUser(user);
@@ -37,7 +46,6 @@ const Login = () => {
 	}, [user]);
 	return (
 		<section className='login'>
-			<Navbar />
 			<article>
 				<h3>welcome Back</h3>
 				<form>
@@ -45,11 +53,13 @@ const Login = () => {
 						type='text'
 						placeholder='e-mail'
 						onChange={(e) => setUserMail(e.target.value)}
+						style={emailMatch ? null : { color: "red" }}
 					/>
 					<input
 						type='password'
 						placeholder='password'
 						onChange={(e) => setUserPass(e.target.value)}
+						style={passMatch ? null : { color: "red" }}
 					/>
 					<button onClick={login}>Login</button>
 					<Link to='/register'>Create new Account</Link>
