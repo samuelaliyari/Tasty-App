@@ -5,6 +5,7 @@
 	align-items: center;
 	text-align: center;
 	width: 100%;
+	padding: 2.5%;
 	background: url(../../../public/loginBackground.png) center / cover
 		no-repeat;
 	article {
@@ -14,11 +15,11 @@
 		width: 40%;
 		border-radius: 1rem;
 		margin: 0 auto;
-		padding: 5%;
+		padding: 2.5%;
 		border: 2px solid var(--background);
 		h3 {
 			text-align: center;
-			padding-bottom: 20%;
+			padding-bottom: 10%;
 			color: var(--text);
 			font-size: 3.2vw;
 			text-shadow: 0 0 4px black;
@@ -30,15 +31,14 @@
 			align-items: center;
 			input {
 				width: 90%;
-				font-size: 2vw;
-				padding: 2%;
+				font-size: 1.5vw;
 				background-color: rgba(0, 0, 0, 0.643);
 				border: 2px solid var(--text);
-				padding: 3%;
+				padding: 2%;
 				color: var(--text);
 				border-radius: 0.5rem;
 				&::placeholder {
-					font-size: 2vw;
+					font-size: 1.5vw;
 
 					color: var(--text);
 					opacity: 0.4;
@@ -50,7 +50,7 @@
 			button {
 				margin-top: 5vh;
 				width: 90%;
-				font-size: 2vw;
+				font-size: 1.8vw;
 				background-color: rgba(0, 0, 0, 0.643);
 				border: 2px solid var(--text);
 				padding: 2%;
@@ -60,7 +60,7 @@
 			a {
 				color: var(--text);
 				text-decoration: underline;
-				padding-top: 3%;
+				padding-top: 2%;
 				width: 100%;
 				text-align: center;
 				text-underline-offset: 2px;
@@ -71,7 +71,7 @@
 		a {
 			color: greenyellow;
 			text-decoration: underline;
-			padding-top: 3%;
+			padding-top: 2%;
 			width: 90%;
 			text-align: center;
 			text-underline-offset: 2px;

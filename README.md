@@ -1,4 +1,3 @@
-```markdown
 # Tasty App by Samuel M. Aliyari
 
 🍲 A Recipe API Project with Search Function and Filters 🍔
@@ -8,7 +7,6 @@
 Tasty App is a React application that leverages a recipe API, offering search functionality and filters based on region, area, and category. Each recipe detail page includes both a recipe and a video.
 
 ## Installation
-```
 
 1. Clone the repository:
 
